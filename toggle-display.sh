@@ -8,7 +8,7 @@ DRAWTAB="HDMI-A-0"
 CURRENT_MODE=$(xrandr | grep "^$DRAWTAB connected" | grep "1920x1080")
 
 if [ -n "$CURRENT_MODE" ]; then
-  echo "Turning of the duplicate display"
+  echo "Turning off the duplicate display"
   xrandr --output HDMI-A-0 --off
 else
   echo "Turning on and duplicating the display"
